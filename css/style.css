@@ -393,97 +393,7 @@ header {
     color: var(--text-light);
 }
 
-/* Testimonials Section */
-.testimonials {
-    background-color: #fff;
-}
 
-.testimonial-carousel {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.testimonial-item {
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    background-color: #fff;
-    margin: 20px 0;
-}
-
-.quote-icon {
-    font-size: 30px;
-    color: var(--primary-color);
-    opacity: 0.3;
-    margin-bottom: 15px;
-}
-
-.testimonial-author {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.testimonial-author h4 {
-    margin-bottom: 5px;
-}
-
-.testimonial-author p {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-.carousel-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.prev-btn, .next-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border: 1px solid #eee;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.prev-btn:hover, .next-btn:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-    border-color: var(--primary-color);
-}
-
-.carousel-dots {
-    display: flex;
-    gap: 8px;
-    margin: 0 15px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ddd;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.dot.active {
-    background-color: var(--primary-color);
-}
-
-.testimonial-cta {
-    text-align: center;
-    margin-top: 40px;
-}
 
 /* CTA Section */
 .cta-section {
@@ -921,10 +831,6 @@ footer {
     
     .hero-buttons a, .cta-buttons a {
         width: 100%;
-    }
-    
-    .testimonial-item {
-        padding: 20px;
     }
     
     .about-image {
