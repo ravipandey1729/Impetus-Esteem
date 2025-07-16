@@ -264,12 +264,122 @@ header {
     margin-top: 76px;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.crystal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, 
+        rgba(99, 102, 241, 0.6) 0%, 
+        rgba(139, 92, 246, 0.8) 50%, 
+        rgba(99, 102, 241, 0.4) 100%);
+    transform-style: preserve-3d;
+    animation: crystalFall linear infinite;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    box-shadow: 
+        0 0 10px rgba(99, 102, 241, 0.3),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.crystal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.3) 0%, 
+        transparent 50%);
+    clip-path: inherit;
+}
+
+.crystal::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: linear-gradient(225deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        transparent 50%);
+    clip-path: inherit;
+}
+
+/* Crystal variants for different sizes and colors */
+.crystal.small {
+    width: 12px;
+    height: 12px;
+    animation-duration: 8s;
+}
+
+.crystal.medium {
+    width: 16px;
+    height: 16px;
+    animation-duration: 10s;
+}
+
+.crystal.large {
+    width: 24px;
+    height: 24px;
+    animation-duration: 12s;
+}
+
+.crystal.variant1 {
+    background: linear-gradient(45deg, 
+        rgba(139, 92, 246, 0.6) 0%, 
+        rgba(99, 102, 241, 0.8) 50%, 
+        rgba(139, 92, 246, 0.4) 100%);
+    box-shadow: 
+        0 0 10px rgba(139, 92, 246, 0.3),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.crystal.variant2 {
+    background: linear-gradient(45deg, 
+        rgba(245, 158, 11, 0.5) 0%, 
+        rgba(249, 115, 22, 0.7) 50%, 
+        rgba(245, 158, 11, 0.3) 100%);
+    box-shadow: 
+        0 0 10px rgba(245, 158, 11, 0.3),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes crystalFall {
+    0% {
+        transform: translateY(-100vh) rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotateZ(360deg) rotateX(180deg) rotateY(360deg);
+        opacity: 0;
+    }
+}
+
 .hero .container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 
 .hero-content {
@@ -796,31 +906,71 @@ footer {
     }
 }
 
+/* Responsive Crystal Animation */
+@media (max-width: 768px) {
+    .crystal {
+        animation-duration: 6s !important;
+    }
+    
+    .crystal.small {
+        width: 8px;
+        height: 8px;
+        animation-duration: 5s !important;
+    }
+    
+    .crystal.medium {
+        width: 12px;
+        height: 12px;
+        animation-duration: 6s !important;
+    }
+    
+    .crystal.large {
+        width: 16px;
+        height: 16px;
+        animation-duration: 7s !important;
+    }
+}
+
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
+    .crystal {
+        animation-duration: 4s !important;
     }
     
-    h2 {
-        font-size: 1.8rem;
+    .crystal.small {
+        width: 6px;
+        height: 6px;
+        animation-duration: 3.5s !important;
     }
     
-    .hero-buttons, .cta-buttons {
-        flex-direction: column;
-        gap: 15px;
+    .crystal.medium {
+        width: 8px;
+        height: 8px;
+        animation-duration: 4s !important;
     }
     
-    .hero-buttons a, .cta-buttons a {
-        width: 100%;
+    .crystal.large {
+        width: 12px;
+        height: 12px;
+        animation-duration: 4.5s !important;
     }
-    
-    /* Removed about-image */
-    
-    .pillars-container, .stats-container, .experience-cards {
-        grid-template-columns: 1fr;
+}
+
+/* Reduce animation on low-performance devices */
+@media (prefers-reduced-motion: reduce) {
+    .crystal {
+        animation: none;
+        display: none;
     }
-    
-    .hero-tagline {
-        font-size: 1rem;
-    }
+}
+
+/* Crystal Animation Container */
+.crystal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
 }
