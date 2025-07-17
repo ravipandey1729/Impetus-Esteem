@@ -1,0 +1,130 @@
+/* Responsive Design - Mobile and Tablet Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 120px 0 80px;
+    }
+    
+    .hero-content {
+        max-width: 700px;
+    }
+    
+    .program-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 76px;
+        flex-direction: column;
+        background-color: var(--dark-color);
+        width: 100%;
+        height: calc(100vh - 76px);
+        transition: var(--transition);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        padding: 20px 0;
+        justify-content: flex-start;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-text {
+        width: 100%;
+    }
+    
+    .program-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons, .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-buttons a, .cta-buttons a {
+        width: 100%;
+    }
+    
+    .pillars-container, .stats-container, .experience-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
+    }
+    
+    .hero-content {
+        padding: 30px 20px;
+    }
+    
+    .about-text {
+        padding: 40px 25px;
+    }
+}

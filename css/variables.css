@@ -1,0 +1,29 @@
+/* CSS Variables and Root Styles - Purple + Blue Theme */
+:root {
+    --primary-color: #8b5cf6;
+    --secondary-color: #a855f7;
+    --accent-color: #6366f1;
+    --dark-color: #1f2937;
+    --darker-color: #111827;
+    --light-color: #374151;
+    --lighter-color: #4b5563;
+    --text-color: #f9fafb;
+    --text-light: #d1d5db;
+    --text-muted: #9ca3af;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --border-color: #374151;
+    --card-bg: #1f2937;
+    --hover-bg: #374151;
+    --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #3b82f6 100%);
+    --gradient-accent: linear-gradient(135deg, #a855f7 0%, #8b5cf6 100%);
+    --gradient-dark: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    --border-radius: 12px;
+    --border-radius-lg: 20px;
+    --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    --box-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.3);
+    --box-shadow-hover: 0 12px 40px rgba(139, 92, 246, 0.3);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
