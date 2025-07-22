@@ -88,6 +88,8 @@ footer::before {
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .social-icons a:hover {
@@ -112,5 +114,41 @@ footer::before {
     padding-top: 20px;
     border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Dark Mode Footer Styles */
+body.dark-mode footer {
+    background: rgba(15, 23, 42, 0.95);
+    border-top: 1px solid rgba(71, 85, 105, 0.3);
+    color: var(--text-color);
+}
+
+body.dark-mode footer::before {
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.7), transparent);
+}
+
+body.dark-mode .footer-logo h3 {
+    color: var(--text-color);
+}
+
+body.dark-mode .footer-logo p {
+    color: var(--text-light);
+}
+
+body.dark-mode .footer-link-group h4 {
+    color: var(--text-color);
+}
+
+body.dark-mode .footer-link-group ul li a {
+    color: var(--text-muted);
+}
+
+body.dark-mode .footer-link-group ul li a:hover {
+    color: var(--primary-color);
+}
+
+body.dark-mode .footer-bottom {
+    border-top: 1px solid rgba(71, 85, 105, 0.3);
     color: var(--text-muted);
 }

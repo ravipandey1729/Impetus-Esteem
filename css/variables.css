@@ -28,3 +28,26 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --primary-color: #a855f7;
+    --secondary-color: #8b5cf6;
+    --accent-color: #7c3aed;
+    --dark-color: #0f172a;
+    --darker-color: #1e293b;
+    --light-color: #334155;
+    --lighter-color: #475569;
+    --text-color: #f1f5f9;
+    --text-light: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --card-bg: #1e293b;
+    --hover-bg: #334155;
+    --gradient-primary: linear-gradient(135deg, #a855f7 0%, #7c3aed 50%, #6366f1 100%);
+    --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    --gradient-light: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --box-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.4);
+    --box-shadow-hover: 0 12px 40px rgba(168, 85, 247, 0.4);
+}

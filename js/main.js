@@ -1,5 +1,45 @@
 // Wait for DOM to load completely
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle Functionality
+    const themeSwitch = document.getElementById('theme-switch');
+    const themeSlider = themeSwitch ? themeSwitch.querySelector('.theme-slider') : null;
+    
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    
+    // Apply saved theme on page load
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (themeSlider) {
+            themeSlider.textContent = '🌙';
+        }
+    } else {
+        if (themeSlider) {
+            themeSlider.textContent = '☀️';
+        }
+    }
+    
+    // Theme toggle click handler
+    if (themeSwitch) {
+        themeSwitch.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                // Switch to dark mode
+                localStorage.setItem('theme', 'dark');
+                if (themeSlider) {
+                    themeSlider.textContent = '🌙';
+                }
+            } else {
+                // Switch to light mode
+                localStorage.setItem('theme', 'light');
+                if (themeSlider) {
+                    themeSlider.textContent = '☀️';
+                }
+            }
+        });
+    }
+    
     // Navigation menu toggle for mobile
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');

@@ -45,14 +45,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(139, 92, 246, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 2px solid rgba(139, 92, 246, 0.9);
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
     position: relative;
     z-index: 2;
     box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+    font-size: 3rem;
+}
+
+body.dark-mode .card-icon {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--primary-color);
 }
 
 .card-icon::before {
@@ -214,4 +220,58 @@
 .value-item p {
     color: var(--text-light);
     line-height: 1.6;
+}
+
+/* Dark Mode Card Styles */
+body.dark-mode .program-card,
+body.dark-mode .pillar-card,
+body.dark-mode .stat-item,
+body.dark-mode .experience-card,
+body.dark-mode .value-item {
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 
+                0 8px 24px rgba(168, 85, 247, 0.15);
+}
+
+body.dark-mode .program-card:hover,
+body.dark-mode .pillar-card:hover,
+body.dark-mode .stat-item:hover,
+body.dark-mode .experience-card:hover,
+body.dark-mode .value-item:hover {
+    background: rgba(51, 65, 85, 0.9);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4), 
+                0 12px 32px rgba(168, 85, 247, 0.3);
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+body.dark-mode .program-card h3,
+body.dark-mode .pillar-card h3,
+body.dark-mode .stat-item h3,
+body.dark-mode .experience-card h4,
+body.dark-mode .value-item h3 {
+    color: var(--text-color);
+}
+
+body.dark-mode .program-card p,
+body.dark-mode .pillar-card p,
+body.dark-mode .stat-item p,
+body.dark-mode .experience-card p,
+body.dark-mode .value-item p {
+    color: var(--text-light);
+}
+
+body.dark-mode .card-icon,
+body.dark-mode .pillar-icon,
+body.dark-mode .stat-icon,
+body.dark-mode .experience-icon,
+body.dark-mode .value-icon {
+    background: rgba(168, 85, 247, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+body.dark-mode .program-card::before,
+body.dark-mode .pillar-card::before {
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.8), transparent);
 }

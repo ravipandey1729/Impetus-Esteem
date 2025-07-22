@@ -51,13 +51,8 @@
     max-width: 900px;
     text-align: center;
     animation: fadeInUp 1s ease-out;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: var(--border-radius-lg);
+    background: transparent;
     padding: 50px 40px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
@@ -120,4 +115,41 @@
     border-color: var(--primary-color);
     transform: translateY(-3px);
     box-shadow: 0 12px 40px rgba(139, 92, 246, 0.3);
+}
+
+/* Dark Mode Hero Styles */
+body.dark-mode .hero {
+    background: var(--gradient-light);
+}
+
+body.dark-mode .hero::before {
+    background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.25) 0%, transparent 70%);
+}
+
+body.dark-mode .hero::after {
+    background: conic-gradient(from 0deg, transparent, rgba(168, 85, 247, 0.15), transparent);
+}
+
+body.dark-mode .hero-content h1 {
+    color: var(--text-color);
+}
+
+body.dark-mode .hero-content p {
+    color: var(--text-light);
+}
+
+body.dark-mode .programs-hero {
+    background: var(--gradient-light);
+}
+
+body.dark-mode .programs-hero h1 {
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body.dark-mode .programs-hero p {
+    color: var(--text-light);
 }

@@ -106,3 +106,93 @@ header {
     background-color: var(--text-color);
     transition: var(--transition);
 }
+
+/* Theme Toggle Button */
+.theme-toggle {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.theme-switch:hover {
+    background: rgba(139, 92, 246, 0.3);
+    transform: scale(1.05);
+}
+
+.theme-slider {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: var(--light-color);
+    border-radius: 50%;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.4);
+}
+
+.theme-slider i {
+    font-size: 10px;
+}
+
+/* Dark mode styles */
+body.dark-mode .theme-slider {
+    transform: translateX(28px);
+}
+
+body.dark-mode .theme-switch {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+body.dark-mode .theme-slider {
+    background: var(--dark-color);
+    color: var(--primary-color);
+}
+
+/* Dark Mode Navigation Styles */
+body.dark-mode header {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .logo {
+    color: var(--text-color);
+}
+
+body.dark-mode .logo:hover {
+    color: var(--primary-color);
+}
+
+body.dark-mode .nav-menu a {
+    color: var(--text-light);
+}
+
+body.dark-mode .nav-menu a:hover,
+body.dark-mode .nav-menu a.active {
+    color: var(--primary-color);
+    background: rgba(168, 85, 247, 0.15);
+}
+
+body.dark-mode .menu-toggle .bar {
+    background-color: var(--text-color);
+}
