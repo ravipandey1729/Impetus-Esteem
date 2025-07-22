@@ -14,7 +14,7 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: var(--text-color);
-    background: var(--gradient-dark);
+    background: var(--gradient-light);
     background-attachment: fixed;
     overflow-x: hidden;
 }
