@@ -128,3 +128,93 @@
         padding: 40px 25px;
     }
 }
+
+/* Programs Page Responsive Styles */
+@media (max-width: 768px) {
+    .programs-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .programs-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .programs-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .program-detail-section {
+        padding: 60px 0;
+    }
+    
+    .program-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .program-title h2 {
+        font-size: 2.2rem;
+    }
+    
+    .program-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .program-description p {
+        font-size: 1.1rem;
+        padding: 25px;
+    }
+    
+    .offer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .offer-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .outcomes-section {
+        padding: 30px 20px;
+    }
+    
+    .outcomes-list li {
+        padding-left: 25px;
+    }
+    
+    .program-summary {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .programs-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .program-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .program-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .program-icon i {
+        font-size: 2rem;
+    }
+    
+    .offer-item {
+        padding: 20px;
+    }
+    
+    .program-description p {
+        padding: 20px;
+    }
+}

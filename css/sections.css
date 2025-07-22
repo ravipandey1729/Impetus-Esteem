@@ -268,3 +268,200 @@
     font-size: 1.1rem;
     line-height: 1.7;
 }
+
+/* Programs Page Styles */
+.programs-hero {
+    background: var(--gradient-light);
+    padding: 140px 0 80px;
+    text-align: center;
+}
+
+.programs-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.programs-hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-light);
+}
+
+.program-detail-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.program-detail-section:nth-child(even) {
+    background: rgba(248, 250, 252, 0.5);
+}
+
+.program-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.program-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+}
+
+.program-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
+.program-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.program-title h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.program-tagline {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.program-description {
+    margin-bottom: 50px;
+}
+
+.program-description p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: var(--border-radius-lg);
+    border-left: 4px solid var(--primary-color);
+}
+
+.what-we-offer {
+    margin-bottom: 50px;
+}
+
+.what-we-offer h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.offer-item {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.offer-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.15);
+}
+
+.offer-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.offer-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.offer-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.outcomes-section {
+    background: rgba(139, 92, 246, 0.05);
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.outcomes-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+.outcomes-list {
+    margin-bottom: 30px;
+}
+
+.outcomes-list li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.outcomes-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.program-summary {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius-md);
+    border-left: 4px solid var(--primary-color);
+}

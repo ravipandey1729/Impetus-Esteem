@@ -31,6 +31,13 @@ footer::before {
     margin-bottom: 30px;
 }
 
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
 .footer-logo h3 {
     color: var(--text-color);
     margin-bottom: 10px;

@@ -20,6 +20,7 @@
     --gradient-accent: linear-gradient(135deg, #a855f7 0%, #8b5cf6 100%);
     --gradient-light: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     --border-radius: 12px;
+    --border-radius-md: 16px;
     --border-radius-lg: 20px;
     --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     --box-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.15);
